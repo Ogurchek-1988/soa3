@@ -1,0 +1,13 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ogurchek-1988/soa-config
+          clone-on-start: true
+  security:
+    user:
+      name: test
+      password: test

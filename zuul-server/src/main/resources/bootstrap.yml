@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zuul-server
+  profiles:
+    active: development
+  cloud:
+    config:
+      uri: http://test:test@localhost:8888
+      username: test
+      password: test

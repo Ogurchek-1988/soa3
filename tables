@@ -1,0 +1,16 @@
+create table music_band(
+    id      int     primary key,
+    creation_date timestamp,
+    name    varchar(155),
+    coordinate_x double precision,
+    coordinate_y double precision,
+    number_of_participants int,
+    establishment_date varchar(155),
+    music_genre varchar(155),
+    personName  varchar(155),
+    birthday    varchar(155),
+    passportID  varchar(155),
+    location_x  float,
+    location_y double precision,
+    location_name   varchar(155)
+);
