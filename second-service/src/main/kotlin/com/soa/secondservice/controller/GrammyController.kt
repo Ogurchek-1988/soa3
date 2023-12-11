@@ -18,7 +18,7 @@ class GrammyController {
     @Autowired
     private lateinit var grammyService: GrammyService
 
-    @PostMapping("/{band-id}/nominate/{genre-id}")
+    /* @PostMapping("/{band-id}/nominate/{genre-id}")
     fun nominateBand(
         @PathVariable("band-id") bandId: Int,
         @PathVariable("genre-id") genreId: Int
@@ -34,7 +34,7 @@ class GrammyController {
     ) {
         println(participantDto.toString())
         grammyService.addPart(participantDto)
-    }
+    } */
 
     @GetMapping("jopa")
     fun test() {

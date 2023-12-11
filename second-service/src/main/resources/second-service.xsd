@@ -1,0 +1,19 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://com/soa/secondservice/soap" targetNamespace="http://com/soa/secondservice/soap" elementFormDefault="qualified">
+    <xs:element name="nominateBand">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bandId" type="xs:int"/>
+                <xs:element name="genreId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="addPart">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="bandId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

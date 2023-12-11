@@ -8,6 +8,7 @@ import io.ktor.client.plugins.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.client.request.*
 import io.ktor.http.*
+import kotlinx.coroutines.runBlocking
 import org.apache.http.conn.ssl.NoopHostnameVerifier
 import org.springframework.stereotype.Service
 
@@ -28,14 +29,16 @@ class FirstServiceClient {
         }
     }
 
-    suspend fun nominateBand(
+    fun nominateBand(
         bandId: Int,
         genreId: Int
-    ) = client.post {
-        url {
-            appendPathSegments(bandId.toString())
-            appendPathSegments("nominate")
-            appendPathSegments(genreId.toString())
+    ) = runBlocking {
+        client.post {
+            url {
+                appendPathSegments(bandId.toString())
+                appendPathSegments("nominate")
+                appendPathSegments(genreId.toString())
+            }
         }
     }
 
@@ -45,13 +48,15 @@ class FirstServiceClient {
         }
     }
 
-    suspend fun addPart(
+    fun addPart(
         participantDto: ParticipantDto
-    ) = client.post {
-        url {
-            appendPathSegments(participantDto.bandId.toString())
-            appendPathSegments("part")
-            appendPathSegments(participantDto.name)
+    ) = runBlocking {
+        client.post {
+            url {
+                appendPathSegments(participantDto.bandId.toString())
+                appendPathSegments("part")
+                appendPathSegments(participantDto.name)
+            }
         }
     }
 }

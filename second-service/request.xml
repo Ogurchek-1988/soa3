@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://com/soa/secondservice/soap">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tns:nominateBand>
+            <tns:bandId>12</tns:bandId>
+            <tns:genreId>12</tns:genreId>
+        </tns:nominateBand>
+    </soapenv:Body>
+</soapenv:Envelope>
